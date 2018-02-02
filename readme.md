@@ -40,10 +40,7 @@ That's it! 🎉
 To remove all resources created run
 
 ```
-serverless remove \
-	--ping-name=google \
-	--ping-host=https://google.com \
-	--ping-alarm-email=alertme@gmail.com
+serverless remove --ping-name=google
 ```
 
 ### Additional Options
