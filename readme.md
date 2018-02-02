@@ -12,13 +12,19 @@ Estimated Costs: **$0.05/month** *(not including free tier)* [source](https://s3
 
 ## Setup
 
-Install the serverless commandline tools
+1. Install node.js
+	* manually: https://nodejs.org
+	* or via package manager: https://nodejs.org/en/download/package-manager/
+
+2. Install the serverless command line tools
 
 ```
 npm install -g serverless
 ```
 
-Deploy this service to AWS (swap out parameters for your needs)
+3. Define [AWS Credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials/) that serverless will use.
+
+4. Deploy this service to AWS (swap out parameters for your needs)
 
 ```
 serverless deploy \
