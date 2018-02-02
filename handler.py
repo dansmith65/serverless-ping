@@ -46,7 +46,7 @@ def publish_elapsed_time_for_host(elapsed_time, host):
                     },
                 ],
                 'Value': elapsed_time,
-                'Unit': 'Seconds'
+                'Unit': 'Milliseconds'
             },
         ]
     )
@@ -64,7 +64,7 @@ def ping(event, context):
         publish_elapsed_time_for_host(0, ping_host)
         return response_with_message("Checked failed for {}, {}".format(ping_host, str(e)))
 
-    elapsed_time = current_time_in_seconds() - start
+    elapsed_time = round((current_time_in_seconds() - start) * 1000)
     publish_elapsed_time_for_host(elapsed_time, ping_host)
 
     return response_with_message("Pinged: {} Duration: {}".format(ping_host, elapsed_time))
