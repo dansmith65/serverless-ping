@@ -3,6 +3,7 @@ provider:
   name: aws
   runtime: python3.6
   memorySize: 128
+  logRetentionInDays: 14
   environment:
     SERVICE_STAGE: ${self:service}-${opt:stage, self:provider.stage}
     PING_METRIC_NAME: ${self:provider.environment.SERVICE_STAGE}
